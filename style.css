@@ -1,0 +1,115 @@
+/* Custom CSS for a dark, neon-vibe aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    /* --- Radial Gradient Background: Dark Purple to Black --- */
+    background: radial-gradient(circle at center, #1a0029 0%, #0d001a 50%, #000000 100%);
+    /* Fallback for older browsers: */
+    background-color: #0d0d0d; 
+    /* ------------------------------------------ */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+.game-container {
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 40px rgba(0, 200, 255, 0.4); /* Neon Blue Glow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #00c8ff;
+}
+
+h1 {
+    color: #00c8ff;
+    font-size: 1.8rem;
+    text-shadow: 0 0 10px rgba(0, 200, 255, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+canvas {
+    border: 1px solid #00c8ff;
+    background-color: #000000;
+    touch-action: none; /* Crucial for mobile controls */
+    max-width: 100%;
+    height: auto;
+}
+
+#score-display {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #ffcc00; /* Yellow for score */
+}
+
+/* Message Box / Game Over Modal */
+#message-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 3px solid #ff4500; /* Orange-Red for warnings */
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.8);
+    z-index: 10;
+    display: none;
+    font-size: 1.1rem;
+    max-width: 80%;
+}
+
+#message-box button {
+    background-color: #ff4500;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+}
+#message-box button:hover {
+    background-color: #cc3700;
+}
+
+/* Mobile Controls */
+.controls {
+    display: none; /* Hidden by default */
+    width: 100%;
+    max-width: 480px;
+    margin-top: 1rem;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.control-button {
+    background-color: #00c8ff; /* Neon Blue */
+    color: #000000;
+    font-size: 1.5rem;
+    width: 45%;
+    padding: 1rem 0;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.1s, transform 0.1s;
+    box-shadow: 0 4px #008fcc;
+    text-align: center;
+    user-select: none;
+    font-weight: 700;
+}
+.control-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #008fcc;
+}

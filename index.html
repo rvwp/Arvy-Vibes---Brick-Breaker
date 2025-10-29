@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Crusher</title>
+    <!-- Link to the Tailwind CSS CDN for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to our custom styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-container">
+    <h1>Canvas Crusher</h1>
+    <canvas id="gameCanvas" width="480" height="600"></canvas>
+    <div id="score-display">SCORE: 0</div>
+
+    <div id="message-box">
+        <p id="message-text">Press Space or the Fire button to start!</p>
+        <button id="restart-button" style="display:none;">RESTART</button>
+    </div>
+
+    <div class="controls">
+        <button id="left-btn" class="control-button">◀</button>
+        <button id="right-btn" class="control-button">▶</button>
+    </div>
+</div>
+
+<!-- Link to our JavaScript game logic -->
+<script src="script.js"></script>
+
+</body>
+</html>
